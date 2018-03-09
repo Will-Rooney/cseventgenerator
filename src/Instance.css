@@ -1,0 +1,23 @@
+/* Needs improvement */
+
+/* Run Instance Button */
+.Run {
+	display:inline-block;
+	min-width: 100px;
+	width: 120px;
+	padding:5px 10px;
+	background: #0B610B;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+/* Terminate Instance Button */
+.Terminate {
+	display:inline-block;
+	min-width: 100px;
+	width: 120px;
+	padding:5px 10px;
+	background: #610B21;
+	color: #FFFFFF;
+	font-weight: bold;
+}
