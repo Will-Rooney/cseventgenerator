@@ -1,205 +1,6705 @@
 {
+  "eventName": "TerminateInstances", 
   "Events": [
     {
-      "id": "i-09c3f53ece0147b7d",
-      "state": {
-        "Code": 32,
-        "Name": "shutting-down"
-      },
       "state_reason": {
-        "Code": "Client.UserInitiatedShutdown",
-        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
-      },
-      "private_dns_name": "",
-      "private_ip_address": null,
-      "public_dns_name": "",
-      "public_ip_address": null,
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
       "placement": {
-        "AvailabilityZone": "us-east-1a",
-        "GroupName": "",
-        "Tenancy": "default"
-      },
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
       "tags": [
         {
-          "Key": "ApplicationName",
-          "Value": "rabbitmq"
-        },
+          "Key": "ApplicationName", 
+          "Value": "bastion"
+        }, 
         {
-          "Key": "Last Modified By",
-          "Value": "kevwelch"
-        },
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
         {
-          "Key": "DataTaxonomy",
+          "Key": "DataTaxonomy", 
           "Value": "Cisco Operations Data"
-        },
+        }, 
         {
-          "Key": "DataClassification",
+          "Key": "DataClassification", 
           "Value": "Cisco Confidential"
-        },
+        }, 
         {
-          "Key": "Last Modified",
+          "Key": "Last Modified", 
           "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
-        },
+        }, 
         {
-          "Key": "Created By",
-          "Value": "kevwelch"
-        },
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
         {
-          "Key": "DataCenter",
+          "Key": "DataCenter", 
           "Value": "na-sbox1"
-        },
+        }, 
         {
-          "Key": "Name",
-          "Value": "rabbit-02"
-        },
+          "Key": "Name", 
+          "Value": "bastion-01"
+        }, 
         {
-          "Key": "CiscoMailAlias",
+          "Key": "CiscoMailAlias", 
           "Value": "spark-call-sbox@cisco.com"
-        },
+        }, 
         {
-          "Key": "ResourceOwner",
+          "Key": "ResourceOwner", 
           "Value": "Cloud UC Engineering 1 - US"
-        },
+        }, 
         {
-          "Key": "Environment",
+          "Key": "Environment", 
           "Value": "Sandbox"
         }
-      ],
-      "vpc_id": null
-    },{
-      "id": "i-09c3f53ece0147b7d",
+      ], 
+      "private_ip_address": null, 
       "state": {
-        "Code": 32,
+        "Code": 32, 
         "Name": "shutting-down"
-      },
-      "state_reason": {
-        "Code": "Client.UserInitiatedShutdown",
-        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
-      },
-      "private_dns_name": "",
-      "private_ip_address": null,
-      "public_dns_name": "",
-      "public_ip_address": null,
-      "placement": {
-        "AvailabilityZone": "us-east-1a",
-        "GroupName": "",
-        "Tenancy": "default"
-      },
-      "tags": [
-        {
-          "Key": "ResourceOwner",
-          "Value": "Cloud UC Engineering 1 - US"
-        },
-        {
-          "Key": "Created By",
-          "Value": "salhadef"
-        },
-        {
-          "Key": "Environment",
-          "Value": "Sandbox"
-        },
-        {
-          "Key": "DataCenter",
-          "Value": "na-sbox1"
-        },
-        {
-          "Key": "DataTaxonomy",
-          "Value": "Cisco Operations Data"
-        },
-        {
-          "Key": "Last Modified",
-          "Value": "2017-10-31 19:03:29.864946475 +0000 UTC"
-        },
-        {
-          "Key": "Last Modified By",
-          "Value": "salhadef"
-        },
-        {
-          "Key": "ApplicationName",
-          "Value": "cfv2dea"
-        },
-        {
-          "Key": "CiscoMailAlias",
-          "Value": "spark-call-sbox@cisco.com"
-        },
-        {
-          "Key": "DataClassification",
-          "Value": "Cisco Confidential"
-        },
-        {
-          "Key": "Name",
-          "Value": "cf-x-dea-01"
-        }
-      ],
-      "vpc_id": "vpc-582a963e"
-    },
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-000", 
+      "public_ip_address": null
+    }, 
     {
-      "id": "i-09c3f53ece0147b7d",
-      "state": {
-        "Code": 32,
-        "Name": "shutting-down"
-      },
       "state_reason": {
-        "Code": "Client.UserInitiatedShutdown",
-        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
-      },
-      "private_dns_name": "",
-      "private_ip_address": null,
-      "public_dns_name": "",
-      "public_ip_address": null,
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
       "placement": {
-        "AvailabilityZone": "us-east-1a",
-        "GroupName": "",
-        "Tenancy": "default"
-      },
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
       "tags": [
         {
-          "Key": "DataCenter",
-          "Value": "na-sbox1"
-        },
+          "Key": "ApplicationName", 
+          "Value": "bastion"
+        }, 
         {
-          "Key": "Created By",
-          "Value": "icahoon"
-        },
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
         {
-          "Key": "Name",
-          "Value": "icahoon-01"
-        },
-        {
-          "Key": "CiscoMailAlias",
-          "Value": "spark-call-sbox@cisco.com"
-        },
-        {
-          "Key": "DataClassification",
-          "Value": "Cisco Confidential"
-        },
-        {
-          "Key": "DataTaxonomy",
+          "Key": "DataTaxonomy", 
           "Value": "Cisco Operations Data"
-        },
+        }, 
         {
-          "Key": "Last Modified",
-          "Value": "2017-11-01 23:16:38.564296724 +0000 UTC"
-        },
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
         {
-          "Key": "Environment",
-          "Value": "Sandbox"
-        },
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
         {
-          "Key": "ApplicationName",
-          "Value": "base"
-        },
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
         {
-          "Key": "Last Modified By",
-          "Value": "icahoon"
-        },
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
         {
-          "Key": "ResourceOwner",
+          "Key": "Name", 
+          "Value": "bastion-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
           "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
         }
-      ],
-      "vpc_id": "vpc-582a963e"
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-001", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cassandra3"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cassandra3-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-002", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cassandra3"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cassandra3-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-003", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cassandra3"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cassandra3-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-004", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-005", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-006", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-007", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-04"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-008", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-05"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-009", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-06"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-010", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-07"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-011", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-08"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-012", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-09"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-013", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-10"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-014", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-11"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-015", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-12"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-016", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-13"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-017", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-14"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-018", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-15"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-019", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-16"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-020", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-17"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-021", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-dea"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-dea-18"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-022", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-haproxy"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-haproxy-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-023", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-haproxy"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-haproxy-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-024", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-haproxy-int-elb"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-haproxy-int-elb-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-025", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-haproxy-int-elb"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-haproxy-int-elb-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-026", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-health"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-health-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-027", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-health"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-health-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-028", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-logging"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-logging-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-029", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-logging"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-logging-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-030", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-nats"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-nats-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-031", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-nats"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-nats-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-032", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-nats"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-nats-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-033", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-router"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-router-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-034", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "cf-c-router"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "cf-c-router-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-035", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "consul"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "consul-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-036", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "consul"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "consul-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-037", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "consul"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "consul-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-038", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-client"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-client-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-039", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-client"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-client-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-040", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-041", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-042", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-043", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-04"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-044", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-05"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-045", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-06"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-046", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-07"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-047", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-08"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-048", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-09"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-049", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-10"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-050", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-11"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-051", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-12"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-052", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-13"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-053", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-data"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-data-14"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-054", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-master"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-master-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-055", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-master"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-master-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-056", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "es-master"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "es-master-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-057", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "eventbroker"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "eventbroker-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-058", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "eventbroker"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "eventbroker-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-059", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "eventbroker"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "eventbroker-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-060", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "graphite-v2"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "graphite-v2-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-061", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "graphite-v2"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "graphite-v2-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-062", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "graphite-v2"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "graphite-v2-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-063", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "kafka"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "kafka-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-064", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "kafka"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "kafka-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-065", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "kafka"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "kafka-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-066", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "kibana"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "kibana-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-067", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "logbroker"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "logbroker-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-068", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "logbroker"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "logbroker-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-069", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "logbroker"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "logbroker-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-070", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "logparser"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "logparser-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-071", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "mb-ag"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "mb-ag-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-072", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "mb-br"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "mb-br-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-073", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "mb-br"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "mb-br-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-074", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "mb-br"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "mb-br-03"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-075", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "mb-lb"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "mb-lb-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-076", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "mirror"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "mirror-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-077", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "mirror"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "mirror-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-078", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "rabbit"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "rabbit-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-079", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "rabbit"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "rabbit-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-080", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "redis3"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "redis3-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-081", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "redis3"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "redis3-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-082", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "repos"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "repos-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-083", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "repos"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "repos-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-084", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "revproxy"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "revproxy-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-085", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "revproxy"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "revproxy-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-086", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "sahaproxy-eb"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "sahaproxy-eb-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-087", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "sahaproxy-eb"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "sahaproxy-eb-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-088", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "sahaproxy-lb"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "sahaproxy-lb-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-089", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "sahaproxy-lb"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "sahaproxy-lb-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-090", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "sensu"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "sensu-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-091", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "sensu"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "sensu-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-092", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "sftp-sdl"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "sftp-sdl-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-093", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "smokeping"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "smokeping-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-094", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "smokeping"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "smokeping-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-095", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "traefik"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "traefik-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-096", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "traefik"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "traefik-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-097", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "xcoder"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "xcoder-01"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-098", 
+      "public_ip_address": null
+    }, 
+    {
+      "state_reason": {
+        "Message": "Client.UserInitiatedShutdown: User initiated shutdown", 
+        "Code": "Client.UserInitiatedShutdown"
+      }, 
+      "placement": {
+        "GroupName": "", 
+        "Tenancy": "default", 
+        "AvailabilityZone": "us-east-1a"
+      }, 
+      "private_dns_name": "", 
+      "tags": [
+        {
+          "Key": "ApplicationName", 
+          "Value": "xcoder"
+        }, 
+        {
+          "Key": "Last Modified By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataTaxonomy", 
+          "Value": "Cisco Operations Data"
+        }, 
+        {
+          "Key": "DataClassification", 
+          "Value": "Cisco Confidential"
+        }, 
+        {
+          "Key": "Last Modified", 
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        }, 
+        {
+          "Key": "Created By", 
+          "Value": "cmw"
+        }, 
+        {
+          "Key": "DataCenter", 
+          "Value": "na-sbox1"
+        }, 
+        {
+          "Key": "Name", 
+          "Value": "xcoder-02"
+        }, 
+        {
+          "Key": "CiscoMailAlias", 
+          "Value": "spark-call-sbox@cisco.com"
+        }, 
+        {
+          "Key": "ResourceOwner", 
+          "Value": "Cloud UC Engineering 1 - US"
+        }, 
+        {
+          "Key": "Environment", 
+          "Value": "Sandbox"
+        }
+      ], 
+      "private_ip_address": null, 
+      "state": {
+        "Code": 32, 
+        "Name": "shutting-down"
+      }, 
+      "public_dns_name": "", 
+      "vpc_id": null, 
+      "id": "i-099", 
+      "public_ip_address": null
     }
-  ],
-  "eventName": "TerminateInstances"
+  ]
 }
