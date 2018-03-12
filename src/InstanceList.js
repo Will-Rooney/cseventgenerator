@@ -2,24 +2,27 @@ import React, { Component } from 'react';
 import './InstanceList.css';
 
 import Instance from './Instance';
+import instanceNames from './instance_list.json';
 
 class InstanceList extends Component {
 	constructor(props) {
 		super(props);
-		// TODO - Load static list of instances and their properites
-		this.state = { instances: ['instance 01', 'instance 02', 'instance 03'] };
+		this.state = { instances: instanceNames };
 	}
 	render() {
 		return (
 			<div className="InstanceList">
 				<table id="InstanceTable">
-		        <tr>
-		          <th>Instance</th>
-		          <th>Run Status</th>
-		          <th>Run/Terminate</th>
-		        </tr>
-		        {this.renderInstances()}
-		      </table>
+					<tbody>
+						<tr>
+							<th>Instance</th>
+							<th>Run Status</th>
+							<th>Run/Terminate</th>
+							<th>HTTP Request Response</th>
+						</tr>
+						{this.renderInstances()}
+					</tbody>
+				</table>
 			</div>
 		);
 	}
@@ -31,7 +34,6 @@ class InstanceList extends Component {
 			/>
 		));
 	}
-
 }
 
 export default InstanceList;
