@@ -1,0 +1,197 @@
+{
+  "Events": [
+    {
+      "id": "i-01",
+      "state": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "state_reason": null,
+      "private_dns_name": "ip-192-168-200-56.ec2.internal",
+      "private_ip_address": "192.168.200.56",
+      "public_dns_name": "",
+      "public_ip_address": null,
+      "placement": {
+        "AvailabilityZone": "us-east-1a",
+        "GroupName": "",
+        "Tenancy": "default"
+      },
+      "tags": [
+        {
+          "Key": "ApplicationName",
+          "Value": "rabbitmq"
+        },
+        {
+          "Key": "Last Modified By",
+          "Value": "kevwelch"
+        },
+        {
+          "Key": "DataTaxonomy",
+          "Value": "Cisco Operations Data"
+        },
+        {
+          "Key": "DataClassification",
+          "Value": "Cisco Confidential"
+        },
+        {
+          "Key": "Last Modified",
+          "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+        },
+        {
+          "Key": "Created By",
+          "Value": "kevwelch"
+        },
+        {
+          "Key": "DataCenter",
+          "Value": "na-sbox1"
+        },
+        {
+          "Key": "Name",
+          "Value": "rabbit-02"
+        },
+        {
+          "Key": "CiscoMailAlias",
+          "Value": "spark-call-sbox@cisco.com"
+        },
+        {
+          "Key": "ResourceOwner",
+          "Value": "Cloud UC Engineering 1 - US"
+        },
+        {
+          "Key": "Environment",
+          "Value": "Sandbox"
+        }
+      ],
+      "vpc_id": null
+    },
+    {
+      "id": "i-02",
+      "state": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "state_reason": null,
+      "private_dns_name": "ip-192-168-200-56.ec2.internal",
+      "private_ip_address": "192.168.200.56",
+      "public_dns_name": "",
+      "public_ip_address": null,
+      "placement": {
+        "AvailabilityZone": "us-east-1a",
+        "GroupName": "",
+        "Tenancy": "default"
+      },
+      "tags": [
+        {
+          "Key": "ResourceOwner",
+          "Value": "Cloud UC Engineering 1 - US"
+        },
+        {
+          "Key": "Created By",
+          "Value": "salhadef"
+        },
+        {
+          "Key": "Environment",
+          "Value": "Sandbox"
+        },
+        {
+          "Key": "DataCenter",
+          "Value": "na-sbox1"
+        },
+        {
+          "Key": "DataTaxonomy",
+          "Value": "Cisco Operations Data"
+        },
+        {
+          "Key": "Last Modified",
+          "Value": "2017-10-31 19:03:29.864946475 +0000 UTC"
+        },
+        {
+          "Key": "Last Modified By",
+          "Value": "salhadef"
+        },
+        {
+          "Key": "ApplicationName",
+          "Value": "cfv2dea"
+        },
+        {
+          "Key": "CiscoMailAlias",
+          "Value": "spark-call-sbox@cisco.com"
+        },
+        {
+          "Key": "DataClassification",
+          "Value": "Cisco Confidential"
+        },
+        {
+          "Key": "Name",
+          "Value": "cf-x-dea-01"
+        }
+      ],
+      "vpc_id": "vpc-582a963e"
+    },
+    {
+      "id": "i-03",
+      "state": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "state_reason": null,
+      "private_dns_name": "ip-192-168-200-60.ec2.internal",
+      "private_ip_address": "192.168.200.60",
+      "public_dns_name": "",
+      "public_ip_address": null,
+      "placement": {
+        "AvailabilityZone": "us-east-1a",
+        "GroupName": "",
+        "Tenancy": "default"
+      },
+      "tags": [
+        {
+          "Key": "DataCenter",
+          "Value": "na-sbox1"
+        },
+        {
+          "Key": "Created By",
+          "Value": "icahoon"
+        },
+        {
+          "Key": "Name",
+          "Value": "icahoon-01"
+        },
+        {
+          "Key": "CiscoMailAlias",
+          "Value": "spark-call-sbox@cisco.com"
+        },
+        {
+          "Key": "DataClassification",
+          "Value": "Cisco Confidential"
+        },
+        {
+          "Key": "DataTaxonomy",
+          "Value": "Cisco Operations Data"
+        },
+        {
+          "Key": "Last Modified",
+          "Value": "2017-11-01 23:16:38.564296724 +0000 UTC"
+        },
+        {
+          "Key": "Environment",
+          "Value": "Sandbox"
+        },
+        {
+          "Key": "ApplicationName",
+          "Value": "base"
+        },
+        {
+          "Key": "Last Modified By",
+          "Value": "icahoon"
+        },
+        {
+          "Key": "ResourceOwner",
+          "Value": "Cloud UC Engineering 1 - US"
+        }
+      ],
+      "vpc_id": "vpc-582a963e"
+    }
+  ],
+  "eventName": "RunInstances"
+}
