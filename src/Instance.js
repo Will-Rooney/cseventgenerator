@@ -11,6 +11,8 @@ class Instance extends Component {
 		this.state = { status: 'Stopped' };
 		// HTTP Request Status
 		this.reqState = { status: 'No requests have been made' };
+		this.reqCount = 0;
+		this.interval = Math.floor(Math.random()*(300000-60000+1)+60000);
 
 		// Bind 'this' to our functions
 		this.runInstance = this.runInstance.bind(this);
@@ -22,15 +24,14 @@ class Instance extends Component {
 		// Create an interval (1-5 minutes) for which a request will fire
 		// Each instance is initialized with a random interval
 		// The choice between a run or terminate call is based on run status
-		var interval = Math.floor(Math.random()*(300000-60000+1)+60000);
-		console.log('Instance interval:'+((interval/1000)/60).toFixed(2)+' minutes');
+		console.log('Instance interval:'+((this.interval/1000)/60).toFixed(2)+' minutes');
 		setInterval(function() { 
 			if (this.state.status === 'Stopped')
 				this.runInstance();
 			else
 				this.terminateInstance();
 			//console.log("Req Fired"); 
-		}.bind(this), interval);
+		}.bind(this), this.interval);
 	}
 	render() {
 		return (
@@ -42,7 +43,7 @@ class Instance extends Component {
 					<button className="Run" onClick={this.runInstance}>Run</button>
 					<button className="Terminate" onClick={this.terminateInstance}>Terminate</button>
 				</td>
-				<td>{this.reqState.status}</td>
+				<td>Request Interval:&nbsp;&nbsp;{ ((this.interval/1000)/60).toFixed(2) } minutes<br />Request Status:&emsp; {this.reqState.status}<br />Request Count:&emsp;&nbsp;&nbsp;{this.reqCount}</td>
 			</tr>
 		);
 	}
@@ -54,6 +55,10 @@ class Instance extends Component {
 			this.sendRequest("POST","RunInstances", "http://127.0.0.1:3001/dataurl", instanceEvent);
 			//this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", instanceEvent);
 		}
+		else {
+			this.reqState.status = 'Error - No Event Data Exists';
+			this.setState({ status: 'Error' });
+		}
 	}
 	terminateInstance() {
 		// Get sample event data for current instance
@@ -62,6 +67,10 @@ class Instance extends Component {
 		if (!(instanceEvent === null)) {
 			this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3001/deleteurl", instanceEvent);
 			//this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", instanceEvent);
+		}
+		else {
+			this.reqState.status = 'Error - No Event Data Exists';
+			this.setState({ status: 'Error' });
 		}
 	}
 	getInstance(instanceData) {
@@ -80,6 +89,7 @@ class Instance extends Component {
 	}
 	sendRequest(method, eventName, url, data) {
 		// Send POST/DELETE to url with data
+		this.reqCount += 1;
 		fetch(url, {
 			method: method,
 			headers: {
@@ -92,7 +102,7 @@ class Instance extends Component {
 		}).then(function(response) {
 			// Succesful request - update req response status and instance run status
 			//console.log(response);
-			this.reqState= { status: eventName+': '+response.status+' - '+response.statusText };
+			this.reqState= { status: '('+eventName+') '+response.status+' - '+response.statusText };
 			if (eventName === 'RunInstances')
 				this.setState({ status: 'Running' });
 			else

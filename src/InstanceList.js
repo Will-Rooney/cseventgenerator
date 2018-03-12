@@ -19,7 +19,7 @@ class InstanceList extends Component {
 							<th>Instance</th>
 							<th>Run Status</th>
 							<th>Run/Terminate</th>
-							<th>HTTP Request Response</th>
+							<th>HTTP Request</th>
 						</tr>
 						{this.renderInstances()}
 					</tbody>
