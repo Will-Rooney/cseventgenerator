@@ -12,7 +12,7 @@ class Instance extends Component {
 		// HTTP Request Status
 		this.reqState = { status: 'No requests have been made' };
 		this.reqCount = 0;
-		this.interval = Math.floor(Math.random()*(300000-60000+1)+60000);
+		this.interval = Math.floor(Math.random()*(600000-60000+1)+60000);
 
 		// Bind 'this' to our functions
 		this.runInstance = this.runInstance.bind(this);
@@ -21,7 +21,7 @@ class Instance extends Component {
 		this.sendRequest = this.sendRequest.bind(this);
 	}
 	componentDidMount() {
-		// Create an interval (1-5 minutes) for which a request will fire
+		// Create an interval (1-10 minutes) for which a request will fire
 		// Each instance is initialized with a random interval
 		// The choice between a run or terminate call is based on run status
 		console.log('Instance interval:'+((this.interval/1000)/60).toFixed(2)+' minutes');
