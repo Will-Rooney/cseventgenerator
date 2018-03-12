@@ -4,16 +4,33 @@ import runInstanceEvents from './runInstanceEvents.json';
 import terminateInstanceEvents from './terminateInstanceEvents.json';
 import 'whatwg-fetch' // https://github.com/github/fetch
 
-var httpReqRes = "No requests have been made";
-
 class Instance extends Component {
 	constructor(props) {
 		super(props);
+		// Run Status
 		this.state = { status: 'Stopped' };
+		// HTTP Request Status
+		this.reqState = { status: 'No requests have been made' };
+
+		// Bind 'this' to our functions
 		this.runInstance = this.runInstance.bind(this);
 		this.terminateInstance = this.terminateInstance.bind(this);
 		this.getInstance = this.getInstance.bind(this);
 		this.sendRequest = this.sendRequest.bind(this);
+	}
+	componentDidMount() {
+		// Create an interval (1-5 minutes) for which a request will fire
+		// Each instance is initialized with a random interval
+		// The choice between a run or terminate call is based on run status
+		var interval = Math.floor(Math.random()*(300000-60000+1)+60000);
+		console.log('Instance interval:'+((interval/1000)/60).toFixed(2)+' minutes');
+		setInterval(function() { 
+			if (this.state.status === 'Stopped')
+				this.runInstance();
+			else
+				this.terminateInstance();
+			//console.log("Req Fired"); 
+		}.bind(this), interval);
 	}
 	render() {
 		return (
@@ -25,23 +42,30 @@ class Instance extends Component {
 					<button className="Run" onClick={this.runInstance}>Run</button>
 					<button className="Terminate" onClick={this.terminateInstance}>Terminate</button>
 				</td>
-				<td>{httpReqRes}</td>
+				<td>{this.reqState.status}</td>
 			</tr>
 		);
 	}
 	runInstance() {
+		// Get sample event data for current instance
 		var instanceEvent = this.getInstance(runInstanceEvents)
-		// Send POST HTTP Request
-		if (!(instanceEvent === null))
-			this.sendRequest("POST",instanceEvent,"RunInstances");
+		// Send POST HTTP Request if instance data found
+		if (!(instanceEvent === null)) {
+			this.sendRequest("POST","RunInstances", "http://127.0.0.1:3001/dataurl", instanceEvent);
+			//this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", instanceEvent);
+		}
 	}
 	terminateInstance() {
+		// Get sample event data for current instance
 		var instanceEvent = this.getInstance(terminateInstanceEvents)
-		// Send DELETE HTTP request
-		if (!(instanceEvent === null))
-			this.sendRequest("DELETE",instanceEvent,"TerminateInstances");
+		// Send DELETE HTTP request if instance data found
+		if (!(instanceEvent === null)) {
+			this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3001/deleteurl", instanceEvent);
+			//this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", instanceEvent);
+		}
 	}
 	getInstance(instanceData) {
+		// Read through instance data to find instance properties for current instance
 		for (var i=0; i < instanceData.Events.length; i++) {
 			for (var j=0; j < instanceData.Events[i].tags.length; j++) {
 				if (instanceData.Events[i].tags[j].Key === 'Name') {
@@ -52,10 +76,11 @@ class Instance extends Component {
 				}
 			}
 		}
-		return null
+		return null;
 	}
-	sendRequest(method, data, eventName) {
-		fetch('https://csserverlist.herokuapp.com/dataurl', {
+	sendRequest(method, eventName, url, data) {
+		// Send POST/DELETE to url with data
+		fetch(url, {
 			method: method,
 			headers: {
 				'Content-Type': 'application/json'
@@ -65,12 +90,19 @@ class Instance extends Component {
 				eventName: eventName
 			})
 		}).then(function(response) {
-			this.setState({ status: 'Stopped' });
-			httpReqRes = response.text();
-		}, function(error) {
+			// Succesful request - update req response status and instance run status
+			//console.log(response);
+			this.reqState= { status: eventName+': '+response.status+' - '+response.statusText };
+			if (eventName === 'RunInstances')
+				this.setState({ status: 'Running' });
+			else
+				this.setState({ status: 'Stopped' });
+		}.bind(this), function(error) {
+			// Error in request - display error under req response
 			//err.message //=> String
-			httpReqRes = error.message;
-		});
+			this.reqState.status = error.message;
+			this.setState({ status: 'Error' });
+		}.bind(this));
 	}
 }
 
