@@ -19,6 +19,10 @@ class Instance extends Component {
 		this.terminateInstance = this.terminateInstance.bind(this);
 		this.getInstance = this.getInstance.bind(this);
 		this.sendRequest = this.sendRequest.bind(this);
+
+		// Store Instance Properties
+		this.runInstanceEvent = this.getInstance(runInstanceEvents);
+		this.terminateInstanceEvent = this.getInstance(terminateInstanceEvents);
 	}
 	componentDidMount() {
 		// Create an interval (1-10 minutes) for which a request will fire
@@ -48,12 +52,10 @@ class Instance extends Component {
 		);
 	}
 	runInstance() {
-		// Get sample event data for current instance
-		var instanceEvent = this.getInstance(runInstanceEvents)
-		// Send POST HTTP Request if instance data found
-		if (!(instanceEvent === null)) {
-			this.sendRequest("POST","RunInstances", "http://127.0.0.1:3001/dataurl", instanceEvent);
-			//this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", instanceEvent);
+ 		// Send POST HTTP Request if instance data found
+		if (!(this.runInstanceEvent === null)) {
+			this.sendRequest("POST","RunInstances", "http://127.0.0.1:3001/dataurl", this.runInstanceEvent);
+			//this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
@@ -61,12 +63,10 @@ class Instance extends Component {
 		}
 	}
 	terminateInstance() {
-		// Get sample event data for current instance
-		var instanceEvent = this.getInstance(terminateInstanceEvents)
 		// Send DELETE HTTP request if instance data found
-		if (!(instanceEvent === null)) {
-			this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3001/deleteurl", instanceEvent);
-			//this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", instanceEvent);
+		if (!(this.terminateInstanceEvent === null)) {
+			this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3001/deleteurl", this.terminateInstanceEvent);
+			//this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
@@ -78,7 +78,6 @@ class Instance extends Component {
 		for (var i=0; i < instanceData.Events.length; i++) {
 			for (var j=0; j < instanceData.Events[i].tags.length; j++) {
 				if (instanceData.Events[i].tags[j].Key === 'Name') {
-					console.log(this.state.name)
 					if (instanceData.Events[i].tags[j].Value === this.props.name) {
 						return instanceData.Events[i];
 					}
