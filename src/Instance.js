@@ -53,8 +53,8 @@ class Instance extends Component {
 	runInstance() {
  		// Send POST HTTP Request if instance data found
 		if (!(this.runInstanceEvent === null)) {
-			this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
-			//this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
+			//this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
+			this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
@@ -64,8 +64,8 @@ class Instance extends Component {
 	terminateInstance() {
 		// Send DELETE HTTP request if instance data found
 		if (!(this.terminateInstanceEvent === null)) {
-			this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
-			//this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
+			//this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
+			this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
