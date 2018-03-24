@@ -81,21 +81,15 @@ class InstanceList extends Component {
 			.then(function(response) {
 				return response.json();
 			}).then(function(json) {
-				if(json['list']) {
-					for (var i=0; i < json['list'].length; i++) {
-						if (json['list'][i]['Name']) {
-							list.push(json['list'][i]['Name'])
-						}
-						else {
-							console.log('Invalid GET response - Name');
-						}
+				for (var i=0; i < json.length; i++) {
+					if (json[i]['Name']) {
+						list.push(json[i]['Name']);
 					}
-					return list;
+					else {
+						console.log('Invalid GET response');
+					}
 				}
-				else {
-					console.log('Invalid GET response');
-					return [];
-				}
+				return list;
 		}).then(function(list) {
 			//console.log(list);
 			this.runningList = list;
