@@ -96,7 +96,7 @@ class Instance extends Component {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				Events: data,
+				Events: [data],
 				eventName: eventName
 			})
 		}).then(function(response) {
