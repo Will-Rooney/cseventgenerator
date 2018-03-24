@@ -8,7 +8,7 @@ class Instance extends Component {
 	constructor(props) {
 		super(props);
 		// Run Status
-		this.state = { status: 'Stopped' };
+		this.state = { status: this.props.status };
 		// HTTP Request Status
 		this.reqState = { status: 'No requests have been made' };
 		this.reqCount = 0;
@@ -28,13 +28,12 @@ class Instance extends Component {
 		// Create an interval (1-10 minutes) for which a request will fire
 		// Each instance is initialized with a random interval
 		// The choice between a run or terminate call is based on run status
-		console.log('Instance interval:'+((this.interval/1000)/60).toFixed(2)+' minutes');
+		// console.log('Instance interval:'+((this.interval/1000)/60).toFixed(2)+' minutes');
 		setInterval(function() { 
-			if (this.state.status === 'Stopped')
+			if (this.props.status === 'Stopped')
 				this.runInstance();
 			else
 				this.terminateInstance();
-			//console.log("Req Fired"); 
 		}.bind(this), this.interval);
 	}
 	render() {
@@ -42,20 +41,20 @@ class Instance extends Component {
 			// For each instance - add a new entry to our table
 			<tr className="Instance">
 				<td>{this.props.name}</td>
-				<td>{this.state.status}</td>
+				<td>{this.props.status}</td>
 				<td>
 					<button className="Run" onClick={this.runInstance}>Run</button>
 					<button className="Terminate" onClick={this.terminateInstance}>Terminate</button>
 				</td>
-				<td>Request Interval:&nbsp;&nbsp;{ ((this.interval/1000)/60).toFixed(2) } minutes<br />Request Status:&emsp; {this.reqState.status}<br />Request Count:&emsp;&nbsp;&nbsp;{this.reqCount}</td>
+				<td>Request Interval:&nbsp;&nbsp;{ ((this.interval/1000)/60).toFixed(2) } minutes<br />Request Status:&emsp; {this.reqState.status}<br />Request Count:&emsp;&nbsp;&nbsp;{this.reqCount}<br />Desired State:&emsp;&emsp;{this.state.status}</td>
 			</tr>
 		);
 	}
 	runInstance() {
  		// Send POST HTTP Request if instance data found
 		if (!(this.runInstanceEvent === null)) {
-			//this.sendRequest("POST","RunInstances", "http://127.0.0.1:3001/dataurl", this.runInstanceEvent);
-			this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
+			this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
+			//this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
@@ -65,8 +64,8 @@ class Instance extends Component {
 	terminateInstance() {
 		// Send DELETE HTTP request if instance data found
 		if (!(this.terminateInstanceEvent === null)) {
-			//this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3001/deleteurl", this.terminateInstanceEvent);
-			this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
+			this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
+			//this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
@@ -79,11 +78,13 @@ class Instance extends Component {
 			for (var j=0; j < instanceData.Events[i].tags.length; j++) {
 				if (instanceData.Events[i].tags[j].Key === 'Name') {
 					if (instanceData.Events[i].tags[j].Value === this.props.name) {
+						// Found Desired Instance Data
 						return instanceData.Events[i];
 					}
 				}
 			}
 		}
+		// Instance Data Not Found
 		return null;
 	}
 	sendRequest(method, eventName, url, data) {
@@ -100,15 +101,13 @@ class Instance extends Component {
 			})
 		}).then(function(response) {
 			// Succesful request - update req response status and instance run status
-			//console.log(response);
-			this.reqState= { status: '('+eventName+') '+response.status+' - '+response.statusText };
+			this.reqState= { status: '('+eventName+') '+response.status+' - '+response.statusText }
 			if (eventName === 'RunInstances')
 				this.setState({ status: 'Running' });
 			else
 				this.setState({ status: 'Stopped' });
 		}.bind(this), function(error) {
 			// Error in request - display error under req response
-			//err.message //=> String
 			this.reqState.status = error.message;
 			this.setState({ status: 'Error' });
 		}.bind(this));
