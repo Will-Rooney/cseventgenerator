@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ToggleButton from 'react-toggle-button';
 import './InstanceList.css';
 
 import Instance from './Instance';
@@ -10,6 +11,7 @@ class InstanceList extends Component {
 		this.state = { instances: null };
 		this.fetchList = this.fetchList.bind(this);
 		this.runningList = [];
+		this.intervalRequests = { Enabled: false };
 	}
 	componentWillMount() {
 		this.fetchList();
@@ -38,13 +40,31 @@ class InstanceList extends Component {
 		// Render a table to hold all of our instances
 		return (
 			<div className="InstanceList">
+				<table align='right'>
+					<tbody>
+						<tr>
+							<td style={{fontWeight:'bold'}}>Toggle Interval Requests:</td>
+							<td>
+								<ToggleButton
+									thumbStyle={{ borderRadius: 2 }}
+									trackStyle={{ borderRadius: 2 }}
+									value={this.intervalRequests.Enabled}
+									onToggle={ (value) => {
+										this.intervalRequests.Enabled = !value;
+										// Force a re-render
+										this.setState({ instances: instanceNames });
+									}}/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 				<table id="InstanceTable">
 					<tbody>
 						<tr>
 							<th>Instance</th>
 							<th>Run Status</th>
 							<th>Run/Terminate</th>
-							<th>HTTP Request</th>
+							<th>HTTP Requests</th>
 						</tr>
 						{this.renderInstances()}
 					</tbody>
@@ -59,6 +79,7 @@ class InstanceList extends Component {
 				key={name}
 				name={name}
 				status={this.getStatus(name)}
+				enableReq={this.intervalRequests.Enabled}
 			/>
 		));
 	}
@@ -77,7 +98,8 @@ class InstanceList extends Component {
 	}
 	fetchList() {
 		var list = [];
-		fetch('https://csserverlist.herokuapp.com/getml')
+		fetch('https://cmwserver.herokuapp.com/getml')
+		//fetch('http://127.0.0.1:3002/getml')
 			.then(function(response) {
 				return response.json();
 			}).then(function(json) {

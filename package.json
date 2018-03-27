@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "cseventgenerator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
     "react-test-renderer": "^16.2.0",
+    "react-toggle-button": "^2.2.0",
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {

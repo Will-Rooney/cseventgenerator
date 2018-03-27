@@ -19,6 +19,7 @@ class Instance extends Component {
 		this.terminateInstance = this.terminateInstance.bind(this);
 		this.getInstance = this.getInstance.bind(this);
 		this.sendRequest = this.sendRequest.bind(this);
+		this.getIntervalText = this.getIntervalText.bind(this);
 
 		// Store Instance Properties
 		this.runInstanceEvent = this.getInstance(runInstanceEvents);
@@ -30,10 +31,12 @@ class Instance extends Component {
 		// The choice between a run or terminate call is based on run status
 		// console.log('Instance interval:'+((this.interval/1000)/60).toFixed(2)+' minutes');
 		setInterval(function() { 
-			if (this.props.status === 'Stopped')
-				this.runInstance();
-			else
-				this.terminateInstance();
+			if (this.props.enableReq) {
+				if (this.props.status === 'Stopped')
+					this.runInstance();
+				else
+					this.terminateInstance();
+			}
 		}.bind(this), this.interval);
 	}
 	render() {
@@ -46,7 +49,12 @@ class Instance extends Component {
 					<button className="Run" onClick={this.runInstance}>Run</button>
 					<button className="Terminate" onClick={this.terminateInstance}>Terminate</button>
 				</td>
-				<td>Request Interval:&nbsp;&nbsp;{ ((this.interval/1000)/60).toFixed(2) } minutes<br />Request Status:&emsp; {this.reqState.status}<br />Request Count:&emsp;&nbsp;&nbsp;{this.reqCount}<br />Desired State:&emsp;&emsp;{this.state.status}</td>
+				<td>
+					Request Interval:&nbsp;&nbsp;{this.getIntervalText()}
+					<br />Request Status:&emsp; {this.reqState.status}
+					<br />Request Count:&emsp;&nbsp;&nbsp;{this.reqCount}
+					<br />Desired State:&emsp;&emsp;{this.state.status}
+				</td>
 			</tr>
 		);
 	}
@@ -54,7 +62,7 @@ class Instance extends Component {
  		// Send POST HTTP Request if instance data found
 		if (!(this.runInstanceEvent === null)) {
 			//this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
-			this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
+			this.sendRequest("POST","RunInstances", "https://cmwserver.herokuapp.com/dataurl", this.runInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
@@ -65,7 +73,7 @@ class Instance extends Component {
 		// Send DELETE HTTP request if instance data found
 		if (!(this.terminateInstanceEvent === null)) {
 			//this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
-			this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
+			this.sendRequest("DELETE","TerminateInstances", "https://cmwserver.herokuapp.com/deleteurl", this.terminateInstanceEvent);
 		}
 		else {
 			this.reqState.status = 'Error - No Event Data Exists';
@@ -111,6 +119,13 @@ class Instance extends Component {
 			this.reqState.status = error.message;
 			this.setState({ status: 'Error' });
 		}.bind(this));
+	}
+	getIntervalText() {
+		if (this.props.enableReq) { 
+			return(((this.interval/1000)/60).toFixed(2) + ' minutes'); 
+		} else { 
+			return 'Disabled'; 
+		}
 	}
 }
 
