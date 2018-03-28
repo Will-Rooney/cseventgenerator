@@ -7,12 +7,8 @@ import 'whatwg-fetch' // https://github.com/github/fetch
 class Instance extends Component {
 	constructor(props) {
 		super(props);
-		// Run Status
-		this.state = { status: this.props.status };
-		// HTTP Request Status
-		this.reqState = { status: 'No requests have been made' };
-		this.reqCount = 0;
-		this.interval = Math.floor(Math.random()*(600000-60000+1)+60000);
+
+		this.state = { reqStatus: 'No requests have been made', reqCount: 0, interval: Math.floor(Math.random()*((this.props.maxInterval*60*1000)-60000+1)+60000) };
 
 		// Bind 'this' to our functions
 		this.runInstance = this.runInstance.bind(this);
@@ -37,7 +33,16 @@ class Instance extends Component {
 				else
 					this.terminateInstance();
 			}
-		}.bind(this), this.interval);
+		}.bind(this), this.state.interval);
+
+		// Check For Interval changes
+		var old_interval = this.props.maxInterval;
+		setInterval(function() { 
+			if (old_interval !== this.props.maxInterval) {
+				this.setState({ interval: Math.floor(Math.random()*((this.props.maxInterval*60*1000)-60000+1)+60000) });
+				old_interval = this.props.maxInterval;
+			}
+		}.bind(this), 1000);
 	}
 	render() {
 		return (
@@ -49,12 +54,9 @@ class Instance extends Component {
 					<button className="Run" onClick={this.runInstance}>Run</button>
 					<button className="Terminate" onClick={this.terminateInstance}>Terminate</button>
 				</td>
-				<td>
-					Request Interval:&nbsp;&nbsp;{this.getIntervalText()}
-					<br />Request Status:&emsp; {this.reqState.status}
-					<br />Request Count:&emsp;&nbsp;&nbsp;{this.reqCount}
-					<br />Desired State:&emsp;&emsp;{this.state.status}
-				</td>
+				<td>{this.getIntervalText()}</td>
+				<td>{this.state.reqStatus}</td>
+				<td>{this.state.reqCount}</td>
 			</tr>
 		);
 	}
@@ -65,7 +67,7 @@ class Instance extends Component {
 			this.sendRequest("POST","RunInstances", "https://cmwserver.herokuapp.com/dataurl", this.runInstanceEvent);
 		}
 		else {
-			this.reqState.status = 'Error - No Event Data Exists';
+			this.setState({ reqStatus: 'Error - No Event Data Exists'});
 			this.setState({ status: 'Error' });
 		}
 	}
@@ -76,7 +78,7 @@ class Instance extends Component {
 			this.sendRequest("DELETE","TerminateInstances", "https://cmwserver.herokuapp.com/deleteurl", this.terminateInstanceEvent);
 		}
 		else {
-			this.reqState.status = 'Error - No Event Data Exists';
+			this.setState({ reqStatus: 'Error - No Event Data Exists' });
 			this.setState({ status: 'Error' });
 		}
 	}
@@ -97,7 +99,7 @@ class Instance extends Component {
 	}
 	sendRequest(method, eventName, url, data) {
 		// Send POST/DELETE to url with data
-		this.reqCount += 1;
+		this.setState({ reqCount: this.state.reqCount + 1 });
 		fetch(url, {
 			method: method,
 			headers: {
@@ -109,20 +111,21 @@ class Instance extends Component {
 			})
 		}).then(function(response) {
 			// Succesful request - update req response status and instance run status
-			this.reqState= { status: '('+eventName+') '+response.status+' - '+response.statusText }
-			if (eventName === 'RunInstances')
-				this.setState({ status: 'Running' });
-			else
-				this.setState({ status: 'Stopped' });
+			if (response.status === 400 && response.statusText === 'Bad Request') {
+				this.setState({ reqStatus: '('+eventName+') '+response.status+' - '+eventName+' already requested' });
+			}
+			else {
+				this.setState({ reqStatus: '('+eventName+') '+response.status+' - '+response.statusText });
+			}
+			this.props.fetchList();
 		}.bind(this), function(error) {
 			// Error in request - display error under req response
-			this.reqState.status = error.message;
-			this.setState({ status: 'Error' });
+			this.setState({ reqStatus: error.message });
 		}.bind(this));
 	}
 	getIntervalText() {
 		if (this.props.enableReq) { 
-			return(((this.interval/1000)/60).toFixed(2) + ' minutes'); 
+			return(((this.state.interval/1000)/60).toFixed(2) + ' minutes'); 
 		} else { 
 			return 'Disabled'; 
 		}

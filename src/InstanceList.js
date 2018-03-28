@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
 import ToggleButton from 'react-toggle-button';
+import IntervalSlider from './IntervalSlider';
 import './InstanceList.css';
-
 import Instance from './Instance';
+
 import instanceNames from './instance_list.json'; // load instance_list.json into instanceNames
+import runInstanceEvents from './runInstanceEvents.json';
+import terminateInstanceEvents from './terminateInstanceEvents.json';
+
 
 class InstanceList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { instances: null };
+		this.state = { instances: null, runningList: [], maxInterval: 10, enableInterval: false};
+
 		this.fetchList = this.fetchList.bind(this);
-		this.runningList = [];
-		this.intervalRequests = { Enabled: false };
+		this.updateInterval = this.updateInterval.bind(this);
+		this.runInstances = this.runInstances.bind(this);
+		this.terminateInstances = this.terminateInstances.bind(this);
+		this.sendRequest = this.sendRequest.bind(this);
 	}
 	componentWillMount() {
 		this.fetchList();
-		// Wait 100 ms and force a re-render
+		// Wait 100 ms and populate instance list
 		setTimeout(function() {this.setState({ instances: instanceNames });}.bind(this), 100);
-		//this.setState = { instances: instanceNames };
 	}
 	componentDidMount() {
 		// Send HTTP GET to server to find running instances
-		// Check for status updates every 5 seconds
+		// Check for status updates every 1 minute(s)
 		setInterval(function() { 
 			this.fetchList();
-			// Wait 100 ms and force a re-render
-			setTimeout(function() {this.setState({ instances: instanceNames });}.bind(this), 100);
-		}.bind(this), 5000);
+		}.bind(this), 60000);
 	}
 	render() {
 		if (!this.state.instances) {
@@ -43,28 +47,36 @@ class InstanceList extends Component {
 				<table align='right'>
 					<tbody>
 						<tr>
-							<td style={{fontWeight:'bold'}}>Toggle Interval Requests:</td>
+							<td align='right' style={{fontWeight:'bold'}}>Enable/Disable Automatic Events:</td>
 							<td>
 								<ToggleButton
 									thumbStyle={{ borderRadius: 2 }}
 									trackStyle={{ borderRadius: 2 }}
-									value={this.intervalRequests.Enabled}
+									value={this.state.enableInterval}
 									onToggle={ (value) => {
-										this.intervalRequests.Enabled = !value;
+										this.setState({ enableInterval: !value });
 										// Force a re-render
 										this.setState({ instances: instanceNames });
 									}}/>
 							</td>
+							<td align='right' style={{fontWeight:'bold'}}>&emsp;Maximum Event Interval ({this.state.maxInterval} minutes):</td>
+							<td width="30%"><IntervalSlider updateInterval={this.updateInterval}/></td>
 						</tr>
 					</tbody>
 				</table>
+				<span>
+				<button style={{display:'none'}} className="Run" onClick={this.runInstances}>Run All</button>
+				<button style={{display:'none'}} className="Terminate" onClick={this.terminateInstances}>Terminate All</button>
+				</span>
 				<table id="InstanceTable">
 					<tbody>
 						<tr>
 							<th>Instance</th>
 							<th>Run Status</th>
 							<th>Run/Terminate</th>
-							<th>HTTP Requests</th>
+							<th>Event Interval</th>
+							<th>Event Response</th>
+							<th>Event Count</th>
 						</tr>
 						{this.renderInstances()}
 					</tbody>
@@ -79,18 +91,20 @@ class InstanceList extends Component {
 				key={name}
 				name={name}
 				status={this.getStatus(name)}
-				enableReq={this.intervalRequests.Enabled}
+				enableReq={this.state.enableInterval}
+				maxInterval={this.state.maxInterval}
+				fetchList={this.fetchList}
 			/>
 		));
 	}
 	getStatus(name) {
 		// If GET request failed -- server is down
-		if (this.runningList.length > 0 && this.runningList[0] === 'Unavailable') {
+		if (this.state.runningList.length > 0 && this.state.runningList[0] === 'Unavailable') {
 			return 'Unavailable';
 		}
 
-		for (var i=0; i < this.runningList.length; i++) {
-			if (name === this.runningList[i]) {
+		for (var i=0; i < this.state.runningList.length; i++) {
+			if (name === this.state.runningList[i]) {
 				return 'Running';
 			}
 		}
@@ -114,11 +128,45 @@ class InstanceList extends Component {
 				return list;
 		}).then(function(list) {
 			//console.log(list);
-			this.runningList = list;
+			this.setState({ runningList: list});
 		}.bind(this)).catch(function(e) {
 			console.log('Failed to Parse Response',e);
-			this.runningList = ['Unavailable'];
+			this.setState({ runningList: ['Unavailable']});
 		}.bind(this));
+	}
+	updateInterval(value) {
+		this.setState({ maxInterval: value });
+		this.render();
+	}
+	runInstances() {
+ 		// Send POST HTTP Request if instance data found
+		if (!(runInstanceEvents === null)) {
+			//this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
+			this.sendRequest("POST", "https://cmwserver.herokuapp.com/dataurl", runInstanceEvents);
+		}
+	}
+	terminateInstances() {
+		// Send DELETE HTTP request if instance data found
+		if (!(terminateInstanceEvents === null)) {
+			//this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
+			this.sendRequest("DELETE", "https://cmwserver.herokuapp.com/deleteurl", terminateInstanceEvents);
+		}
+	}
+	sendRequest(method, url, data) {
+		// Send POST/DELETE to url with data
+		fetch(url, {
+			method: method,
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ data })
+		}).then(function(response) {
+			// Succesful request - update req response status and instance run status
+			console.log(response.status+' - '+response.statusText);
+		}, function(error) {
+			// Error in request - display error under req response
+			console.log(error.message);
+		});
 	}
 }
 
