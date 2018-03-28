@@ -1,23 +1,91 @@
-/* Needs improvement */
-
-/* Run Instance Button */
 .Run {
-	display:inline-block;
-	min-width: 100px;
+	display: inline-block;
+	background-color: #FFFFFF;
+	color: #000000;
+	text-align: center;
+	padding: 5px 10px;
+	cursor: pointer;
 	width: 120px;
-	padding:5px 10px;
-	background: #0B610B;
-	color: #FFFFFF;
+	margin: 5px;
 	font-weight: bold;
+	border-radius: 8px;
+	transition-duration: 0.5s;
 }
 
-/* Terminate Instance Button */
-.Terminate {
-	display:inline-block;
-	min-width: 100px;
-	width: 120px;
-	padding:5px 10px;
-	background: #610B21;
+.Run span {
+	position: relative;
+	transition-duration: 0.5s;
+}
+
+.Run span:after {
+	content: '\00bb';
+	position: absolute;
+	transition-duration: 0.5s;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+}
+
+.Run:hover {
+	background-color: #00AA00;
 	color: #FFFFFF;
+}
+
+.Run:hover span {
+	padding-right: 20px;
+}
+
+.Run:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.Run {
+	border: 2px solid #00AA00;
+}
+
+.Terminate {
+	display: inline-block;
+	background-color: #FFFFFF;
+	color: #000000;
+	text-align: center;
+	padding: 5px 10px;
+	cursor: pointer;
+	width: 120px;
+	margin: 5px;
 	font-weight: bold;
+	border-radius: 8px;
+	transition-duration: 0.5s;
+}
+
+.Terminate span {
+	position: relative;
+	transition-duration: 0.5s;
+}
+
+.Terminate span:after {
+	content: '\00bb';
+	position: absolute;
+	transition-duration: 0.5s;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+}
+
+.Terminate:hover {
+	background-color: #AA0000;
+	color: #FFFFFF;
+}
+
+.Terminate:hover span {
+	padding-right: 20px;
+}
+
+.Terminate:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.Terminate {
+	border: 2px solid #AA0000;
 }
