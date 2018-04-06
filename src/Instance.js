@@ -111,16 +111,14 @@ class Instance extends Component {
 			})
 		}).then(function(response) {
 			// Succesful request - update req response status and instance run status
-			if (response.status === 400 && response.statusText === 'Bad Request') {
-				this.setState({ reqStatus: '('+eventName+') '+response.status+' - '+eventName+' already requested' });
-			}
-			else {
-				this.setState({ reqStatus: '('+eventName+') '+response.status+' - '+response.statusText });
-			}
+			return response.json()
+		}).then(function(data) {
+			console.log(data)
+			this.setState({ reqStatus: '('+eventName+') '+data.Status });
 			this.props.fetchList();
-		}.bind(this), function(error) {
+		}.bind(this)).catch(function(error) {
 			// Error in request - display error under req response
-			this.setState({ reqStatus: error.message });
+			this.setState({ reqStatus: 'Request Error: ' + error.message });
 		}.bind(this));
 	}
 	getIntervalText() {

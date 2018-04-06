@@ -65,8 +65,8 @@ class InstanceList extends Component {
 					</tbody>
 				</table>
 				<span>
-				<button style={{display:'none'}} className="Run" onClick={this.runInstances}>Run All</button>
-				<button style={{display:'none'}} className="Terminate" onClick={this.terminateInstances}>Terminate All</button>
+				<button className="Run" onClick={this.runInstances}>Run All</button>
+				<button className="Terminate" onClick={this.terminateInstances}>Terminate All</button>
 				</span>
 				<table id="InstanceTable">
 					<tbody>
@@ -112,8 +112,8 @@ class InstanceList extends Component {
 	}
 	fetchList() {
 		var list = [];
-		fetch('https://cmwserver.herokuapp.com/getml')
-		//fetch('http://127.0.0.1:3002/getml')
+		//fetch('https://csserverlist.herokuapp.com/getml')
+		fetch('http://127.0.0.1:3002/getml')
 			.then(function(response) {
 				return response.json();
 			}).then(function(json) {
@@ -141,14 +141,14 @@ class InstanceList extends Component {
 	runInstances() {
  		// Send POST HTTP Request if instance data found
 		if (!(runInstanceEvents === null)) {
-			//this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
+			//this.sendRequest("POST", "http://127.0.0.1:3002/dataurl", runInstanceEvents);
 			this.sendRequest("POST", "https://cmwserver.herokuapp.com/dataurl", runInstanceEvents);
 		}
 	}
 	terminateInstances() {
 		// Send DELETE HTTP request if instance data found
 		if (!(terminateInstanceEvents === null)) {
-			//this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
+			//this.sendRequest("DELETE", "http://127.0.0.1:3002/deleteurl", terminateInstanceEvents);
 			this.sendRequest("DELETE", "https://cmwserver.herokuapp.com/deleteurl", terminateInstanceEvents);
 		}
 	}
@@ -159,11 +159,12 @@ class InstanceList extends Component {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({ data })
+			body: JSON.stringify(data)
 		}).then(function(response) {
 			// Succesful request - update req response status and instance run status
 			console.log(response.status+' - '+response.statusText);
-		}, function(error) {
+			this.fetchList();
+		}.bind(this), function(error) {
 			// Error in request - display error under req response
 			console.log(error.message);
 		});
