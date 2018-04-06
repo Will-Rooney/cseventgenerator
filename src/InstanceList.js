@@ -112,8 +112,8 @@ class InstanceList extends Component {
 	}
 	fetchList() {
 		var list = [];
-		//fetch('https://csserverlist.herokuapp.com/getml')
-		fetch('http://127.0.0.1:3002/getml')
+		fetch('https://cmwserver.herokuapp.com/getml')
+		//fetch('http://127.0.0.1:3002/getml')
 			.then(function(response) {
 				return response.json();
 			}).then(function(json) {
