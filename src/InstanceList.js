@@ -50,8 +50,8 @@ class InstanceList extends Component {
 							<td align='right' style={{fontWeight:'bold'}}>Enable/Disable Automatic Events:</td>
 							<td>
 								<ToggleButton
-									thumbStyle={{ borderRadius: 2 }}
-									trackStyle={{ borderRadius: 2 }}
+									thumbStyle={{ borderRadius: 0 }}
+									trackStyle={{ borderRadius: 0 }}
 									value={this.state.enableInterval}
 									onToggle={ (value) => {
 										this.setState({ enableInterval: !value });
@@ -60,7 +60,7 @@ class InstanceList extends Component {
 									}}/>
 							</td>
 							<td align='right' style={{fontWeight:'bold'}}>&emsp;Maximum Event Interval ({this.state.maxInterval} minutes):</td>
-							<td width="30%"><IntervalSlider updateInterval={this.updateInterval}/></td>
+							<td width="25%"><IntervalSlider updateInterval={this.updateInterval}/></td>
 						</tr>
 					</tbody>
 				</table>
