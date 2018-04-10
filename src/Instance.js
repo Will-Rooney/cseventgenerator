@@ -64,7 +64,8 @@ class Instance extends Component {
  		// Send POST HTTP Request if instance data found
 		if (!(this.runInstanceEvent === null)) {
 			//this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
-			this.sendRequest("POST","RunInstances", "https://cmwserver.herokuapp.com/dataurl", this.runInstanceEvent);
+			this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
+			//this.sendRequest("POST","RunInstances", " https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
 		}
 		else {
 			this.setState({ reqStatus: 'Error - No Event Data Exists'});
@@ -75,7 +76,8 @@ class Instance extends Component {
 		// Send DELETE HTTP request if instance data found
 		if (!(this.terminateInstanceEvent === null)) {
 			//this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
-			this.sendRequest("DELETE","TerminateInstances", "https://cmwserver.herokuapp.com/deleteurl", this.terminateInstanceEvent);
+			this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
+			//this.sendRequest("DELETE","TerminateInstances", "https://cmwserver.herokuapp.com/deleteurl", this.terminateInstanceEvent);
 		}
 		else {
 			this.setState({ reqStatus: 'Error - No Event Data Exists' });
@@ -111,10 +113,10 @@ class Instance extends Component {
 			})
 		}).then(function(response) {
 			// Succesful request - update req response status and instance run status
-			return response.json()
+			return response.text()
 		}).then(function(data) {
 			console.log(data)
-			this.setState({ reqStatus: '('+eventName+') '+data.Status });
+			this.setState({ reqStatus: '('+eventName+') '+data });
 			this.props.fetchList();
 		}.bind(this)).catch(function(error) {
 			// Error in request - display error under req response

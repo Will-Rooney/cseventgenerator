@@ -112,14 +112,15 @@ class InstanceList extends Component {
 	}
 	fetchList() {
 		var list = [];
-		fetch('https://cmwserver.herokuapp.com/getml')
+		fetch('https://csserverlist.herokuapp.com/getml')
+		//fetch('https://cmwserver.herokuapp.com/getml')
 		//fetch('http://127.0.0.1:3002/getml')
 			.then(function(response) {
 				return response.json();
 			}).then(function(json) {
-				for (var i=0; i < json.length; i++) {
-					if (json[i]['Name']) {
-						list.push(json[i]['Name']);
+				for (var i=0; i < json['list'].length; i++) {
+					if (json['list'][i]['Name']) {
+						list.push(json['list'][i]['Name']);
 					}
 					else {
 						console.log('Invalid GET response');
@@ -142,14 +143,16 @@ class InstanceList extends Component {
  		// Send POST HTTP Request if instance data found
 		if (!(runInstanceEvents === null)) {
 			//this.sendRequest("POST", "http://127.0.0.1:3002/dataurl", runInstanceEvents);
-			this.sendRequest("POST", "https://cmwserver.herokuapp.com/dataurl", runInstanceEvents);
+			this.sendRequest("POST", "https://csserverlist.herokuapp.com/dataurl", runInstanceEvents);
+			//this.sendRequest("POST", "https://cmwserver.herokuapp.com/dataurl", runInstanceEvents);
 		}
 	}
 	terminateInstances() {
 		// Send DELETE HTTP request if instance data found
 		if (!(terminateInstanceEvents === null)) {
 			//this.sendRequest("DELETE", "http://127.0.0.1:3002/deleteurl", terminateInstanceEvents);
-			this.sendRequest("DELETE", "https://cmwserver.herokuapp.com/deleteurl", terminateInstanceEvents);
+			this.sendRequest("DELETE", "https://csserverlist.herokuapp.com/deleteurl", terminateInstanceEvents);
+			//this.sendRequest("DELETE", "https://cmwserver.herokuapp.com/deleteurl", terminateInstanceEvents);
 		}
 	}
 	sendRequest(method, url, data) {
