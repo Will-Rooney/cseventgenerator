@@ -8,6 +8,8 @@ import instanceNames from './instance_list.json'; // load instance_list.json int
 import runInstanceEvents from './runInstanceEvents.json';
 import terminateInstanceEvents from './terminateInstanceEvents.json';
 
+import './RangeSlider.css';
+
 
 class InstanceList extends Component {
 	constructor(props) {
