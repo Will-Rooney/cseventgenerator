@@ -7,12 +7,10 @@
 #InstanceTable {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-	border-radius: 8px;
     width: 100%;
 }
 #InstanceTable td, #InstanceTable th {
     border: 1px solid #C6C7CA;
-    \\padding: 5px;
 	padding-left: 10px;
 }
 #InstanceTable tr:nth-child(odd){
@@ -25,6 +23,6 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #049FD9;
+    background: #049FD9;
     color: white;
 }
