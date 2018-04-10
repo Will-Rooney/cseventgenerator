@@ -10,6 +10,8 @@ class Instance extends Component {
 
 		this.state = { reqStatus: 'No requests have been made', reqCount: 0, interval: Math.floor(Math.random()*((this.props.maxInterval*60*1000)-60000+1)+60000) };
 
+		this.dev_serverURL = 'https://csserverlist.herokuapp.com/'
+		
 		// Bind 'this' to our functions
 		this.runInstance = this.runInstance.bind(this);
 		this.terminateInstance = this.terminateInstance.bind(this);
@@ -42,6 +44,10 @@ class Instance extends Component {
 				this.setState({ interval: Math.floor(Math.random()*((this.props.maxInterval*60*1000)-60000+1)+60000) });
 				old_interval = this.props.maxInterval;
 			}
+			if (!this.props.dev_CSSERVER)
+				this.dev_serverURL = 'https://cmwserver.herokuapp.com/'
+			else
+				this.dev_serverURL = 'https://csserverlist.herokuapp.com/'
 		}.bind(this), 1000);
 	}
 	render() {
@@ -64,8 +70,7 @@ class Instance extends Component {
  		// Send POST HTTP Request if instance data found
 		if (!(this.runInstanceEvent === null)) {
 			//this.sendRequest("POST","RunInstances", "http://127.0.0.1:3002/dataurl", this.runInstanceEvent);
-			this.sendRequest("POST","RunInstances", "https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
-			//this.sendRequest("POST","RunInstances", " https://csserverlist.herokuapp.com/dataurl", this.runInstanceEvent);
+			this.sendRequest("POST","RunInstances", "dataurl", this.runInstanceEvent);
 		}
 		else {
 			this.setState({ reqStatus: 'Error - No Event Data Exists'});
@@ -76,8 +81,7 @@ class Instance extends Component {
 		// Send DELETE HTTP request if instance data found
 		if (!(this.terminateInstanceEvent === null)) {
 			//this.sendRequest("DELETE","TerminateInstances", "http://127.0.0.1:3002/deleteurl", this.terminateInstanceEvent);
-			this.sendRequest("DELETE","TerminateInstances", "https://csserverlist.herokuapp.com/deleteurl", this.terminateInstanceEvent);
-			//this.sendRequest("DELETE","TerminateInstances", "https://cmwserver.herokuapp.com/deleteurl", this.terminateInstanceEvent);
+			this.sendRequest("DELETE","TerminateInstances", "deleteurl", this.terminateInstanceEvent);
 		}
 		else {
 			this.setState({ reqStatus: 'Error - No Event Data Exists' });
@@ -99,10 +103,10 @@ class Instance extends Component {
 		// Instance Data Not Found
 		return null;
 	}
-	sendRequest(method, eventName, url, data) {
+	sendRequest(method, eventName, route, data) {
 		// Send POST/DELETE to url with data
 		this.setState({ reqCount: this.state.reqCount + 1 });
-		fetch(url, {
+		fetch(this.dev_serverURL+route, {
 			method: method,
 			headers: {
 				'Content-Type': 'application/json'

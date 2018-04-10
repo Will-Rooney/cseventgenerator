@@ -12,13 +12,15 @@ import terminateInstanceEvents from './terminateInstanceEvents.json';
 class InstanceList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { instances: null, runningList: [], maxInterval: 10, enableInterval: false};
+		this.state = { instances: null, runningList: [], maxInterval: 10, enableInterval: false, dev_CSSERVER: true};
+		this.dev_serverURL = 'https://csserverlist.herokuapp.com/'
 
 		this.fetchList = this.fetchList.bind(this);
 		this.updateInterval = this.updateInterval.bind(this);
 		this.runInstances = this.runInstances.bind(this);
 		this.terminateInstances = this.terminateInstances.bind(this);
 		this.sendRequest = this.sendRequest.bind(this);
+		this.dev_switchServers = this.dev_switchServers.bind(this);
 	}
 	componentWillMount() {
 		this.fetchList();
@@ -30,7 +32,7 @@ class InstanceList extends Component {
 		// Check for status updates every 1 minute(s)
 		setInterval(function() { 
 			this.fetchList();
-		}.bind(this), 60000);
+		}.bind(this), 30000);
 	}
 	render() {
 		if (!this.state.instances) {
@@ -67,6 +69,7 @@ class InstanceList extends Component {
 				<span>
 				<button className="Run" onClick={this.runInstances}>Run All</button>
 				<button className="Terminate" onClick={this.terminateInstances}>Terminate All</button>
+				<button className="Terminate" style={{'display': 'none'}} onClick={this.dev_switchServers}>Toggle Server: csserverlist - {this.dev_serverURL}</button>
 				</span>
 				<table id="InstanceTable">
 					<tbody>
@@ -94,6 +97,7 @@ class InstanceList extends Component {
 				enableReq={this.state.enableInterval}
 				maxInterval={this.state.maxInterval}
 				fetchList={this.fetchList}
+				dev_CSSERVER={this.state.dev_CSSERVER}
 			/>
 		));
 	}
@@ -112,22 +116,26 @@ class InstanceList extends Component {
 	}
 	fetchList() {
 		var list = [];
-		fetch('https://csserverlist.herokuapp.com/getml')
+		fetch(this.dev_serverURL + 'getml')
 		//fetch('https://cmwserver.herokuapp.com/getml')
 		//fetch('http://127.0.0.1:3002/getml')
 			.then(function(response) {
 				return response.json();
 			}).then(function(json) {
-				for (var i=0; i < json['list'].length; i++) {
-					if (json['list'][i]['Name']) {
-						list.push(json['list'][i]['Name']);
+				var data = json['list']
+				if (!this.state.dev_CSSERVER) {
+					data = json; 
+				}
+				for (var i=0; i < data.length; i++) {
+					if (data[i]['Name']) {
+						list.push(data[i]['Name']);
 					}
 					else {
 						console.log('Invalid GET response');
 					}
 				}
 				return list;
-		}).then(function(list) {
+		}.bind(this)).then(function(list) {
 			//console.log(list);
 			this.setState({ runningList: list});
 		}.bind(this)).catch(function(e) {
@@ -143,21 +151,19 @@ class InstanceList extends Component {
  		// Send POST HTTP Request if instance data found
 		if (!(runInstanceEvents === null)) {
 			//this.sendRequest("POST", "http://127.0.0.1:3002/dataurl", runInstanceEvents);
-			this.sendRequest("POST", "https://csserverlist.herokuapp.com/dataurl", runInstanceEvents);
-			//this.sendRequest("POST", "https://cmwserver.herokuapp.com/dataurl", runInstanceEvents);
+			this.sendRequest("POST", "dataurl", runInstanceEvents);
 		}
 	}
 	terminateInstances() {
 		// Send DELETE HTTP request if instance data found
 		if (!(terminateInstanceEvents === null)) {
 			//this.sendRequest("DELETE", "http://127.0.0.1:3002/deleteurl", terminateInstanceEvents);
-			this.sendRequest("DELETE", "https://csserverlist.herokuapp.com/deleteurl", terminateInstanceEvents);
-			//this.sendRequest("DELETE", "https://cmwserver.herokuapp.com/deleteurl", terminateInstanceEvents);
+			this.sendRequest("DELETE", "deleteurl", terminateInstanceEvents);
 		}
 	}
-	sendRequest(method, url, data) {
+	sendRequest(method, route, data) {
 		// Send POST/DELETE to url with data
-		fetch(url, {
+		fetch(this.dev_serverURL+route, {
 			method: method,
 			headers: {
 				'Content-Type': 'application/json'
@@ -171,6 +177,15 @@ class InstanceList extends Component {
 			// Error in request - display error under req response
 			console.log(error.message);
 		});
+	}
+	dev_switchServers() {
+		if (this.state.dev_CSSERVER)
+			this.dev_serverURL = 'https://cmwserver.herokuapp.com/'
+		else {
+			this.dev_serverURL = 'https://csserverlist.herokuapp.com/'
+		}
+		this.setState({dev_CSSERVER: !this.state.dev_CSSERVER});
+		this.fetchList();
 	}
 }
 
