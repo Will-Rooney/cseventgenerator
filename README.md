@@ -1,3 +1,11 @@
+# Event Generator (AWS Simulator)
+**Will Rooney | Matthew King | Cecil Hutchings**
+
+&nbsp;&nbsp;&nbsp;&nbsp;The Cisco Dynamic RevProxy team’s Event Generator simulates the data AWS (Amazon-Web-Services) is configured to send (See. AWS_CloudWatch_Instance_Monitoring_Guide.pdf). These events consist of ‘Run’ and ‘Terminate’ calls on instances running on AWS. To simulate such events, the Event Generator sends HTTP requests with sample event data.
+
+&nbsp;&nbsp;&nbsp;&nbsp;The instances and event data used in the software are derived statically for simulation purposes (typically this data would be dynamically created on AWS). The Event Generator sends HTTP requests to a server that simulates Cisco’s Dynamic Reverse Proxy. Run statuses for each instance are displayed and synchronization techniques are used between the server and the event generator to keep them up to date.
+
+# React
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -142,7 +150,17 @@ my-app/
     App.test.js
     index.css
     index.js
+    Instance.css
+    Instance.js
+    Instance.test.js
+    instance_list.json
+    InstanceList.css
+    InstanceList.js
+    IntervalSlider.js
     logo.svg
+    RangeSlider.css
+    runInstanceEvents.json
+    terminateInstanceEvents.json
 ```
 
 For the project to build, **these files must exist with exact filenames**:
@@ -165,7 +183,7 @@ They will not be included in the production build so you can use them for things
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -173,12 +191,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](#running-tests) for more information.
 
-### `npm run build`
+### `yarn run build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -188,7 +206,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
 
-### `npm run eject`
+### `yarn run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
