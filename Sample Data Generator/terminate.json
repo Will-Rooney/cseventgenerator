@@ -1,0 +1,67 @@
+{
+  "id": "i-01",
+  "state": {
+    "Code": 32,
+    "Name": "shutting-down"
+  },
+  "state_reason": {
+    "Code": "Client.UserInitiatedShutdown",
+    "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+  },
+  "private_dns_name": "",
+  "private_ip_address": null,
+  "public_dns_name": "",
+  "public_ip_address": null,
+  "placement": {
+    "AvailabilityZone": "us-east-1a",
+    "GroupName": "",
+    "Tenancy": "default"
+  },
+  "tags": [
+    {
+      "Key": "ApplicationName",
+      "Value": "rabbitmq"
+    },
+    {
+      "Key": "Last Modified By",
+      "Value": "cmw"
+    },
+    {
+      "Key": "DataTaxonomy",
+      "Value": "Cisco Operations Data"
+    },
+    {
+      "Key": "DataClassification",
+      "Value": "Cisco Confidential"
+    },
+    {
+      "Key": "Last Modified",
+      "Value": "2017-10-04 17:23:33.591928935 +0000 UTC"
+    },
+    {
+      "Key": "Created By",
+      "Value": "cmw"
+    },
+    {
+      "Key": "DataCenter",
+      "Value": "na-sbox1"
+    },
+    {
+      "Key": "Name",
+      "Value": "App Name"
+    },
+    {
+      "Key": "CiscoMailAlias",
+      "Value": "spark-call-sbox@cisco.com"
+    },
+    {
+      "Key": "ResourceOwner",
+      "Value": "Cloud UC Engineering 1 - US"
+    },
+    {
+      "Key": "Environment",
+      "Value": "Sandbox"
+    }
+  ],
+  "vpc_id": null
+}
