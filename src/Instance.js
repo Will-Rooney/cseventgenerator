@@ -63,6 +63,7 @@ class Instance extends Component {
 		/* Interval 2 */
 		// Check For Interval changes
 		var old_interval = this.props.maxInterval;
+		var old_parentReqCount = this.props.parentReqCount;
 		setInterval(function() { 
 			if (old_interval !== this.props.maxInterval) {
 				this.setState({ interval: Math.floor(Math.random()*((this.props.maxInterval*60*1000)-60000+1)+60000) });
@@ -72,6 +73,10 @@ class Instance extends Component {
 				this.dev_serverURL = 'https://cmwserver.herokuapp.com/'
 			else
 				this.dev_serverURL = 'https://csserverlist.herokuapp.com/'
+			if (old_parentReqCount < this.props.parentReqCount) {
+				this.setState({ reqCount: this.state.reqCount + (this.props.parentReqCount - old_parentReqCount)});
+				old_parentReqCount = this.props.parentReqCount;
+			}
 		}.bind(this), 1000);
 	}
 	/**

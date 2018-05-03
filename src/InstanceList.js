@@ -25,7 +25,8 @@ class InstanceList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { instances: null, runningList: [], maxInterval: 10, enableInterval: false, dev_CSSERVER: true};
-		this.dev_serverURL = 'https://csserverlist.herokuapp.com/'
+		this.dev_serverURL = 'https://csserverlist.herokuapp.com/';
+		this.reqCount = 0;
 
 		this.fetchList = this.fetchList.bind(this);
 		this.updateInterval = this.updateInterval.bind(this);
@@ -147,6 +148,7 @@ class InstanceList extends Component {
 				enableReq={this.state.enableInterval}
 				maxInterval={this.state.maxInterval}
 				fetchList={this.fetchList}
+				parentReqCount={this.reqCount}
 				dev_CSSERVER={this.state.dev_CSSERVER}
 			/>
 		));
@@ -268,6 +270,7 @@ class InstanceList extends Component {
 		}).then(function(response) {
 			// Succesful request - update req response status and instance run status
 			console.log(response.status+' - '+response.statusText);
+			this.reqCount++;
 			this.fetchList();
 		}.bind(this), function(error) {
 			// Error in request - display error under req response
