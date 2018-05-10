@@ -1,0 +1,7 @@
+Amazon is an end-to-end solution for the management of applications and data on the cloud. It has support for multiple programming interfaces in C#, Java, NodeJS, and Python.
+
+So, the issue was really finding the right tool in a rather large tool box to implement our project. Initially we focused on using CloudTrail, but found that was a system specifically tailored to logging events on Amazon's Web Services (AWS). Our research then pointed us to CloudWatch. Cloudwatch observes general system events on AWS.
+
+A CloudwWatch rule configured for these events will detect every time a user runs or stops an instance, in this case a web-application. We then take this event data, process it, and log the results in Amazon's Simple Storage Service (S3). This happens automatically by executing code written in python through another one of Amazon's services called Lambda.
+
+Our project automates a simple task. This is the automation most think of: the kind that eliminates jobs. It eliminates a step that adds no quality to the development of Cisco products in and of itself.

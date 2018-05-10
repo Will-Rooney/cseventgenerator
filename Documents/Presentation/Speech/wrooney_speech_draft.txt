@@ -1,0 +1,10 @@
+Amazon's Web Services (AWS) is an end-to-end solution for the management of applications and data on the cloud. We use a montioring service on AWS called Cloudwatch to observe general system events, specifically changes to instances (web applications).
+
+We process these events and use the data to dynamically update Cisco's reverse proxy. We have built a simulation to better help demonstrate how our project works:
+
+[Demo]
+
+Our project automates a simple task. This is the automation most think of: the kind that eliminates jobs. It eliminates a step that adds no quality to the development of Cisco products in and of itself.
+
+
+

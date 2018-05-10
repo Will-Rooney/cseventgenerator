@@ -1,0 +1,84 @@
+***************************************************
+*---Cisco Dynamic RevProxy Sandbox Access Guide---*
+*-------------------------------------------------*
+*-----------------By Will Rooney------------------*
+*-------------------------------------------------*
+***************************************************
+
+Open up a new terminal and type the following commands:
+
+sudo apt-get update
+sudo apt-get upgrade
+cd ~/.ssh
+
+Make sure that your private key exists in the .ssh directory and make a note of the name.
+Create the config file in the .ssh directory ( I like to use nano to edit/create files in the terminal):
+
+nano config
+
+Type the following in, replace 'wirooney' with the username you used in AWS:
+
+ #--------------------------------------------
+ # Sandbox
+ 
+ # na-sbox1
+ Host !bastion.na-sbox1.scplatform.cloud !bastion-??.na-sbox1.scplatform.cloud *.na-sbox1.scplatform.cloud
+   ProxyCommand ssh -q -W %h:%p wirooney@bastion.na-sbox1.scplatform.cloud
+
+ 
+ Host bastion.na-sbox1 bastion-??.na-sbox1
+   HostName %h.scplatform.cloud
+
+ 
+ Host !bastion.na-sbox1 !bastion-??.na-sbox1 *.na-sbox1
+   HostName %h.scplatform.cloud
+   ProxyCommand ssh -q -W %h:%p wirooney@bastion.na-sbox1.scplatform.cloud
+
+
+ Host *
+   ExitOnForwardFailure    yes
+   StrictHostKeyChecking   no
+   UserKnownHostsFile      /dev/null
+   UseRoaming              no
+
+
+To exit a save the config file with Nano, press 'Ctrl-X' then 'y' then 'Enter'
+
+Next let's make sure the ssh-agent is running, type the following:
+
+eval 'ssh-agent'
+
+You should see a process id associated with ssh, e.g., 'echo Agent pid 3769', our ssh agent is running with process id 3769
+
+Now add your private key. This will allow you to connect to the reverse proxy sandbox without having to type in your password twice for your ssh key:
+
+ssh-add <private key>		# e.g, 'ssh-add wirooney_rsa'
+
+
+Now let's test our connection to bastion. We want to also specify our private key using the '-i' option and our username:
+
+ssh -i wirooney_rsa wirooney@bastion-02-internal.na-sbox1.scplatform.cloud
+
+Make sure to replace 'wirooney_rsa' with the name of your private key and 'wirooney' with your username.
+If all is well you should be connected to bastion. If not, you can set the verbose option to see more details:
+
+ssh -v -i wirooney_rsa wirooney@bastion-02-internal.na-sbox1.scplatform.cloud
+
+
+Now for connection to the revproxy:
+
+ssh -i wirooney_rsa wirooney@revproxy-02-internal.na-sbox1.scplatform.cloud
+
+Again for more information upon connecting use '-v':
+
+ssh -v -i wirooney_rsa wirooney@revproxy-02-internal.na-sbox1.scplatform.cloud
+
+
+Once your in the revproxy run the following commands:
+
+sudo su root
+cd /etc/puppet/modules/revproxy/
+
+To apply the puppet configuration run:
+
+puppet apply -v -e "include st_revproxy"
