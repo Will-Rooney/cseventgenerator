@@ -3,7 +3,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;The Cisco Dynamic RevProxy team’s Event Generator simulates the data AWS (Amazon-Web-Services) is configured to send (See [AWS CloudWatch Instance Monitoring Guide](https://github.com/Will-Rooney/cseventgenerator/blob/master/Documents/Deployment/AWS/AWS_CloudWatch_Instance_Monitoring_Guide.pdf)). These events consist of ‘Run’ and ‘Terminate’ calls on instances running on AWS. To simulate such events, the Event Generator sends HTTP requests with sample event data.
 
-&nbsp;&nbsp;&nbsp;&nbsp;The instances and event data used in the software are derived statically for simulation purposes (typically this data would be dynamically created on AWS) using the [Sample Data Generator](https://github.com/Will-Rooney/cseventgenerator/tree/master/Sample%20Data%20Generator). The Event Generator sends HTTP requests to a server that simulates Cisco’s Dynamic Reverse Proxy. Run statuses for each instance are displayed and synchronization techniques are used between the server and the event generator to keep them up to date.
+&nbsp;&nbsp;&nbsp;&nbsp;The instances and event data used in the software are derived statically using the [Sample Data Generator](https://github.com/Will-Rooney/cseventgenerator/tree/master/Sample%20Data%20Generator) for simulation purposes  (typically this data would be dynamically created on AWS). The Event Generator sends HTTP requests to a server that simulates Cisco’s Dynamic Reverse Proxy. Run statuses for each instance are displayed and synchronization techniques are used between the server and the event generator to keep them up to date.
 
 # React
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
